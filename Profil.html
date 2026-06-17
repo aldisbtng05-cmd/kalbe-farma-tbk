@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT Kalbe Farma Tbk - Profil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    :root{--kb:#004aad;--kg:#8aa01d;--kl:#eaf2ff;--ko:#ff6b35;--bg:#fff;--bg2:#f7fbff;--tx:#1f2d3d;--tm:#667085;--cb:#fff;--br:#eef2f7;--nb:#fff;--sh:rgba(0,0,0,.07);}
+    [data-theme="dark"]{--bg:#0f1117;--bg2:#161b27;--tx:#e2e8f0;--tm:#94a3b8;--cb:#1e2435;--br:#2d3748;--nb:#13192a;--sh:rgba(0,0,0,.35);}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--tx);transition:background .3s,color .3s;}
+    .navbar{background:var(--nb)!important;border-bottom:1px solid var(--br);min-height:70px;transition:all .3s;}
+    .navbar-brand span{font-weight:800;color:var(--kb);font-size:15px;}
+    .nav-link{font-weight:600;font-size:13px;text-transform:uppercase;color:var(--tx)!important;padding:8px 12px!important;position:relative;}
+    .nav-item .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--kg);transition:width .3s;}
+    .nav-item:hover .nav-link::after,.nav-item.active .nav-link::after{width:100%;}
+    #darkToggle{border:none;background:none;font-size:19px;cursor:pointer;color:var(--tx);transition:transform .3s;padding:4px 8px;border-radius:8px;}
+    #darkToggle:hover{transform:rotate(20deg);}
+    /* PAGE HEADER */
+    .page-header{background:linear-gradient(135deg,var(--kb),#0066cc);padding:60px 0 40px;color:#fff;}
+    .page-header h1{font-weight:800;font-size:2.4rem;}
+    .page-pill{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);padding:7px 18px;border-radius:999px;font-size:13px;display:inline-block;margin-bottom:14px;}
+    /* CARDS */
+    .p-card{background:var(--cb);border:1px solid var(--br);border-radius:18px;box-shadow:0 8px 28px var(--sh);transition:transform .3s,box-shadow .3s;overflow:hidden;}
+    .p-card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,74,173,.13);}
+    .p-card-bar{height:5px;background:linear-gradient(90deg,var(--kb),var(--kg));}
+    .p-icon{width:56px;height:56px;background:var(--kl);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+    .p-icon i{font-size:22px;color:var(--kb);}
+    .green-title{color:var(--kg);font-weight:700;font-size:1.15rem;}
+    /* STAT PILLS */
+    .stat-pill{background:var(--kl);border-radius:12px;padding:16px;text-align:center;}
+    .stat-pill h4{font-weight:800;color:var(--kb);font-size:1.6rem;}
+    .stat-pill p{color:var(--tm);font-size:12px;margin:0;}
+    /* TIMELINE */
+    .timeline{position:relative;padding-left:28px;}
+    .timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--kl);}
+    .tl-item{position:relative;margin-bottom:20px;}
+    .tl-dot{position:absolute;left:-24px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--kb);border:2px solid var(--cb);box-shadow:0 0 0 3px var(--kl);}
+    .tl-year{font-weight:700;color:var(--kb);font-size:13px;}
+    /* VM BOX */
+    .vm-visi{background:var(--kb);color:#fff;border-radius:16px;padding:26px;}
+    .vm-misi{background:var(--kl);border-radius:16px;padding:26px;}
+    /* TESTI */
+    .testi-card{background:var(--cb);border:1px solid var(--br);border-radius:18px;padding:24px;box-shadow:0 8px 28px var(--sh);transition:transform .3s;height:100%;}
+    .testi-card:hover{transform:translateY(-5px);}
+    .testi-av{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px;flex-shrink:0;}
+    .testi-quote{color:var(--kb);opacity:.18;font-size:44px;line-height:1;}
+    .testi-text{color:var(--tm);font-style:italic;line-height:1.8;font-size:13px;}
+    .testi-name{font-weight:700;color:var(--tx);font-size:14px;}
+    .testi-role{font-size:11px;color:var(--tm);}
+    .stars{color:#f59e0b;font-size:12px;}
+    /* FAQ */
+    .accordion-item{background:var(--cb)!important;border:1px solid var(--br)!important;border-radius:14px!important;margin-bottom:10px;overflow:hidden;}
+    .accordion-button{background:var(--cb)!important;color:var(--tx)!important;font-weight:600;font-size:14px;box-shadow:none!important;}
+    .accordion-button:not(.collapsed){color:var(--kb)!important;background:var(--kl)!important;}
+    [data-theme="dark"] .accordion-button::after{filter:invert(1);}
+    .accordion-body{color:var(--tm);line-height:1.8;font-size:14px;background:var(--cb);}
+    /* SEC */
+    .sec-label{background:var(--kl);color:var(--kb);font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:999px;}
+    .sec-title{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:800;color:var(--tx);}
+    .sec-sub{color:var(--tm);max-width:600px;margin:0 auto;line-height:1.7;}
+    /* FOOTER */
+    footer{background:#111827;}
+    footer h5{color:#fff;font-weight:700;margin-bottom:14px;}
+    footer a,footer p{color:#9ca3af;font-size:13px;text-decoration:none;display:block;margin-bottom:6px;}
+    footer a:hover{color:#fff;}
+    .footer-btm{border-top:1px solid #1f2937;}
+    .soc-icon{width:36px;height:36px;background:#1f2937;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#9ca3af;transition:all .2s;margin-right:5px;}
+    .soc-icon:hover{background:var(--kb);color:#fff;}
+    #scrollTop{position:fixed;bottom:90px;right:16px;width:40px;height:40px;background:var(--kb);color:#fff;border:none;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:17px;cursor:pointer;z-index:9998;}
+    .author-badge{position:fixed;bottom:14px;right:14px;text-align:center;z-index:9999;background:var(--cb);border-radius:12px;padding:8px 12px;box-shadow:0 4px 16px var(--sh);border:1px solid var(--br);}
+    .author-badge .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--kb),var(--kg));display:flex;align-items:center;justify-content:center;margin:0 auto 5px;color:#fff;font-weight:800;font-size:15px;}
+    .author-badge p{margin:0;font-size:10px;color:var(--tm);}
+    .author-badge .nm{font-weight:700;font-size:11px;color:var(--tx);}
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="Beranda.html">
+      <span>PT Kalbe Farma Tbk</span>
+    </a>
+    <div class="d-flex align-items-center gap-1 order-lg-last">
+      <button id="darkToggle" title="Dark Mode"><i class="fas fa-moon"></i></button>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    </div>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item active"><a class="nav-link" href="#">Profil</a></li>
+        <li class="nav-item"><a class="nav-link" href="Layanan.html">Informasi Utama</a></li>
+        <li class="nav-item"><a class="nav-link" href="Galeri_dark.html">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="Formulir.html">Formulir</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header text-center">
+  <div class="container" data-aos="fade-up">
+    <div class="page-pill"><i class="fas fa-building me-2"></i>PT Kalbe Farma Tbk</div>
+    <h1>Profil Perusahaan</h1>
+    <p class="opacity-75 mt-2">Mengenal lebih dekat perusahaan farmasi terbesar di Indonesia</p>
+  </div>
+</div>
+
+<section class="py-5" style="background:var(--bg);">
+  <div class="container">
+    <!-- Deskripsi -->
+    <div class="p-card mb-4" data-aos="fade-up">
+      <div class="p-card-bar"></div>
+      <div class="p-4">
+        <div class="p-icon"><i class="fas fa-building"></i></div>
+        <h4 class="green-title mb-3">Deskripsi Umum Perusahaan</h4>
+        <p style="color:var(--tm);line-height:1.8;">PT Kalbe Farma Tbk adalah perusahaan farmasi terbesar di Indonesia dan Asia Tenggara. Kalbe fokus pada produk farmasi, nutrisi, consumer health, serta distribusi dan logistik. Website resmi Kalbe menampilkan informasi produk, layanan, berita, dan info investor.</p>
+        <div class="row g-3 mt-3">
+          <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="0"><div class="stat-pill"><h4 id="c1" data-target="1966">0</h4><p>Tahun Berdiri</p></div></div>
+          <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100"><div class="stat-pill"><h4>KLBF</h4><p>Kode Saham BEI</p></div></div>
+          <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200"><div class="stat-pill"><h4 id="c2" data-target="4">0</h4><p>Divisi Utama</p></div></div>
+          <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300"><div class="stat-pill"><h4 id="c3" data-target="50">0</h4><p>Negara Ekspor</p></div></div>
+        </div>
+      </div>
+    </div>
+    <!-- Sejarah -->
+    <div class="p-card mb-4" data-aos="fade-up">
+      <div class="p-card-bar"></div>
+      <div class="p-4">
+        <div class="p-icon"><i class="fas fa-history"></i></div>
+        <h4 class="green-title mb-4">Sejarah & Latar Belakang</h4>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <p style="color:var(--tm);line-height:1.8;">PT Kalbe Farma Tbk didirikan di Jakarta pada tahun 1966 dan berkembang menjadi salah satu perusahaan farmasi terbesar di Asia Tenggara melalui pengembangan organik, inovasi, dan akuisisi bisnis.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="timeline">
+              <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1966</div><p class="small" style="color:var(--tm);">Kalbe Farma didirikan di Jakarta</p></div>
+              <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1991</div><p class="small" style="color:var(--tm);">Tercatat di Bursa Efek Indonesia (KLBF)</p></div>
+              <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2000-an</div><p class="small" style="color:var(--tm);">Ekspansi ke pasar regional Asia Tenggara</p></div>
+              <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Kini</div><p class="small" style="color:var(--tm);">Pemimpin farmasi Indonesia dengan 4 divisi utama</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Visi Misi -->
+    <div class="p-card mb-4" data-aos="fade-up">
+      <div class="p-card-bar"></div>
+      <div class="p-4">
+        <div class="p-icon"><i class="fas fa-bullseye"></i></div>
+        <h4 class="green-title mb-4">Visi & Misi</h4>
+        <div class="row g-3">
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="vm-visi h-100">
+              <h5 class="fw-bold mb-3"><i class="fas fa-eye me-2"></i>Visi</h5>
+              <p class="opacity-90 lh-lg mb-0">Menjadi perusahaan produk kesehatan Indonesia terbaik dengan skala internasional yang didukung oleh inovasi, merek yang kuat, dan manajemen yang prima.</p>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="vm-misi h-100">
+              <h5 class="fw-bold mb-3" style="color:var(--kb);"><i class="fas fa-rocket me-2"></i>Misi</h5>
+              <p style="color:var(--tm);" class="lh-lg mb-0">Meningkatkan kesehatan untuk kehidupan yang lebih baik bagi seluruh masyarakat melalui produk berkualitas tinggi dan layanan inovatif yang berkelanjutan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section class="py-5" style="background:var(--bg);">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="sec-label">Testimoni</span>
+      <h2 class="sec-title mt-2">Dipercaya oleh Banyak Pihak</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="testi-card"><div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testi-text mb-4">"Kalbe adalah mitra bisnis yang sangat dapat diandalkan. Komitmen mereka terhadap kualitas sangat tinggi dan konsisten."</p>
+          <div class="d-flex align-items-center gap-3"><div class="testi-av" style="background:linear-gradient(135deg,#004aad,#7fb3ff);">H</div>
+            <div><div class="testi-name">Hendra Wijaya</div><div class="testi-role">Direktur Distribusi, Surabaya</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div></div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="testi-card"><div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testi-text mb-4">"Program CSR Kalbe sangat berdampak bagi masyarakat sekitar. Mereka benar-benar peduli terhadap kesehatan komunitas."</p>
+          <div class="d-flex align-items-center gap-3"><div class="testi-av" style="background:linear-gradient(135deg,#9d174d,#ec4899);">R</div>
+            <div><div class="testi-name">Rina Putri</div><div class="testi-role">Koordinator NGO Kesehatan</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div></div></div></div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="testi-card"><div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testi-text mb-4">"Inovasi R&D Kalbe terus berkembang pesat. Mereka selalu berada di garis terdepan pengembangan obat-obatan baru untuk Indonesia."</p>
+          <div class="d-flex align-items-center gap-3"><div class="testi-av" style="background:linear-gradient(135deg,#065f46,#34d399);">M</div>
+            <div><div class="testi-name">Prof. Maya Sari</div><div class="testi-role">Peneliti Farmasi, UI</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5" style="background:var(--bg2);">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="sec-label">FAQ</span>
+      <h2 class="sec-title mt-2">Pertanyaan tentang Kalbe</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <div class="accordion" id="faqProfil">
+          <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fp1"><i class="fas fa-question-circle me-3" style="color:var(--kb);"></i>Siapa pendiri Kalbe Farma?</button></h2>
+            <div id="fp1" class="accordion-collapse collapse show" data-bs-parent="#faqProfil"><div class="accordion-body">Kalbe Farma didirikan oleh <strong>Dr. Boenjamin Setiawan</strong> dan keluarganya di Jakarta pada tahun 1966. Beliau adalah tokoh berpengaruh dalam dunia farmasi Indonesia.</div></div></div>
+          <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fp2"><i class="fas fa-question-circle me-3" style="color:var(--kb);"></i>Di mana kantor pusat Kalbe Farma?</button></h2>
+            <div id="fp2" class="accordion-collapse collapse" data-bs-parent="#faqProfil"><div class="accordion-body">Kantor pusat berlokasi di <strong>Gedung KALBE, Jl. Let. Jend. Suprapto Kav. 4, Jakarta 10510, Indonesia</strong>. Perusahaan juga memiliki fasilitas produksi di Cikarang, Jawa Barat.</div></div></div>
+          <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fp3"><i class="fas fa-question-circle me-3" style="color:var(--kb);"></i>Berapa banyak anak perusahaan Kalbe?</button></h2>
+            <div id="fp3" class="accordion-collapse collapse" data-bs-parent="#faqProfil"><div class="accordion-body">Kalbe Farma memiliki lebih dari <strong>40 anak perusahaan</strong> yang bergerak di berbagai bidang mulai dari manufaktur farmasi, distribusi, riset dan pengembangan, hingga layanan kesehatan digital.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-5">
+  <div class="container">
+    <div class="row gy-4 mb-4">
+      <div class="col-md-4"><img src="galeri/kb tbk.png" alt="Logo" style="height:28px;filter:brightness(10);" class="mb-3"><p>Perusahaan farmasi terbesar di Indonesia sejak 1966.</p>
+        <div class="mt-3"><a href="#" class="soc-icon"><i class="fab fa-facebook-f"></i></a><a href="#" class="soc-icon"><i class="fab fa-instagram"></i></a><a href="#" class="soc-icon"><i class="fab fa-linkedin-in"></i></a><a href="#" class="soc-icon"><i class="fab fa-youtube"></i></a></div></div>
+      <div class="col-6 col-md-2"><h5>Navigasi</h5><a href="Beranda.html">Beranda</a><a href="Layanan.html">Informasi Utama</a><a href="Galeri.html">Galeri</a><a href="Formulir.html">Formulir</a></div>
+      <div class="col-6 col-md-3"><h5>Kontak</h5><p><i class="fas fa-map-marker-alt me-1"></i>Gedung KALBE, Jakarta 10510</p><p><i class="fas fa-phone me-1"></i>(021) 4287-3888</p></div>
+    </div>
+    <div class="footer-btm pt-3 text-center"><p style="color:#6b7280;margin:0;font-size:13px;">© 2026 PT Kalbe Farma Tbk.</p></div>
+  </div>
+</footer>
+
+<button id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+<div class="author-badge"><div class="av">A</div><p class="nm">Aldi Sabtutrang</p><p>NIM: 24.53.031531</p></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({once:true,duration:700,easing:'ease-out-cubic'});
+const html=document.documentElement, dBtn=document.getElementById('darkToggle');
+const saved=localStorage.getItem('kalbe-theme')||'light';
+html.setAttribute('data-theme',saved);
+dBtn.innerHTML=saved==='dark'?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';
+dBtn.addEventListener('click',()=>{const isDark=html.getAttribute('data-theme')==='dark';const next=isDark?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('kalbe-theme',next);dBtn.innerHTML=next==='dark'?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';});
+const stBtn=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>{stBtn.style.display=window.scrollY>300?'flex':'none';});
+stBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+// counters
+function animC(){document.querySelectorAll('[data-target]').forEach(el=>{const t=+el.dataset.target;let c=0;const step=t/(1500/16);const tick=()=>{c=Math.min(c+step,t);el.textContent=Math.round(c).toLocaleString();if(c<t)requestAnimationFrame(tick);};tick();});}
+const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){animC();io.disconnect();}},{threshold:.3});
+const tp=document.querySelector('.stat-pill');if(tp)io.observe(tp);
+</script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<html> 
+    <style>
+         * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+      body {
+      background: #fff;
+    }
+
+    .navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70px;
+  padding: 0 24px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .nav-left {
+      gap: 28px;
+    }
+
+    .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 70px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #444;
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0 2px;
+    }
+
+    .nav-item.active::after,
+    .nav-item:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background: #8aa01d;
+    }
+     
+  .galeri-section {
+    padding: 90px 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  }
+
+  .galeri-container {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .galeri-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .galeri-label {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #eaf2ff;
+    color: #004aad;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .galeri-header h2 {
+    font-size: 34px;
+    color: #1f2d3d;
+    margin-bottom: 10px;
+  }
+
+   .galeri-subtitle {
+    color: #667085;
+    max-width: 760px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+
+  .galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .galeri-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+    border: 1px solid #eef2f7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+
+  .galeri-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(0, 74, 173, 0.15);
+  }
+    .Galeri-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgb(2, 107, 244);
+  }
+
+  .galeri-card img {
+    width: 100%;
+    height: 190px; 
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    transition: transform 0.4s ease;
+  }
+
+  .galeri-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .galeri-card h3 {
+    color: #004aad;
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+
+  .galeri-card p {
+    color: #4b5563;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  .galeri-detail {
+    margin-top: 35px;
+    background: #004aad;
+    color: #fff;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    animation: fadeUp 0.8s ease both;
+  } 
+
+  .galeri-detail h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .galeri-detail p {
+    line-height: 1.8;
+    font-size: 15px;
+    color: #f4f8ff;
+  }
+
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    }
+  
+
+    /* ===== DARK MODE ===== */
+    :root {
+      --bg: #ffffff;
+      --bg-section: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      --text-primary: #1f2d3d;
+      --text-secondary: #667085;
+      --text-nav: #444;
+      --navbar-bg: #ffffff;
+      --navbar-border: #e5e5e5;
+      --card-bg: #ffffff;
+      --card-border: #eef2f7;
+      --card-shadow: rgba(0,0,0,0.07);
+      --card-title: #004aad;
+      --card-text: #4b5563;
+      --label-text: #004aad;
+      --label-bg: #eaf2ff;
+      --detail-bg: #004aad;
+      --detail-text: #f4f8ff;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --bg-section: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-nav: #cbd5e1;
+      --navbar-bg: #0f172a;
+      --navbar-border: #1e293b;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --card-shadow: rgba(0,0,0,0.4);
+      --card-title: #7fb3ff;
+      --card-text: #94a3b8;
+      --label-text: #7fb3ff;
+      --label-bg: #1e3a5f;
+      --detail-bg: #1e3a5f;
+      --detail-text: #e0f0ff;
+    }
+
+    body { background: var(--bg); transition: background 0.3s ease; }
+
+    .navbar {
+      background: var(--navbar-bg);
+      border-bottom-color: var(--navbar-border);
+      transition: background 0.3s ease;
+    }
+    .nav-link { color: var(--text-nav); }
+
+    /* Dark Mode Toggle */
+    .dark-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px 6px;
+      border-radius: 6px;
+      font-size: 20px;
+      line-height: 1;
+      color: var(--text-nav);
+      transition: opacity 0.2s;
+    }
+    .dark-toggle:hover { opacity: 0.7; }
+
+    /* Dark mode gallery */
+    .galeri-section { background: var(--bg-section); }
+    .galeri-header h2 { color: var(--text-primary); }
+    .galeri-subtitle { color: var(--text-secondary); }
+    .galeri-label { background: var(--label-bg); color: var(--label-text); }
+    .galeri-card {
+      background: var(--card-bg);
+      border-color: var(--card-border);
+      box-shadow: 0 10px 28px var(--card-shadow);
+    }
+    .galeri-card h3 { color: var(--card-title); }
+    .galeri-card p { color: var(--card-text); }
+    .galeri-detail { background: var(--detail-bg); }
+    .galeri-detail p { color: var(--detail-text); }
+
+    /* Fixed overlay dark */
+    [data-theme="dark"] div[style*="position: fixed"] p { color: #cbd5e1 !important; }
+    [data-theme="dark"] div[style*="position: fixed"] img { border-color: #475569 !important; }
+
+    </style>
+
+ <body>
+      
+     <nav class="navbar">
+   <div class="nav-left">
+      <div class="nav-item">
+        <a href="index.html" class="nav-link">Berada</a>
+      </div>
+
+       <div class="nav-left">
+      <div class="nav-item">
+        <a href="Profil.html" class="nav-link">Profil</a>
+      </div>
+
+       <div class="nav-item">
+        <a href="Layanan.html" class="nav-link">Informasi Utama</a>
+      </div>
+
+      <div class="nav-item active">
+        <a href="#" class="nav-link">Galeri/Detail Tambahan</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="Formulir.html" class="nav-link">Formulir</a>
+    </div>
+
+      <div class="nav-item" style="margin-left: auto; padding-left: 16px;">
+        <button class="dark-toggle" onclick="toggleDark()" aria-label="Toggle dark mode">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+      </div>
+    </nav>
+   
+    <section id="galeri" class="galeri-section">
+  <div class="galeri-container">
+    <div class="galeri-header">
+      <p class="galeri-label">PT Kalbe Farma Tbk</p>
+      <h2>Galeri / Detail Tambahan</h2>
+      <p class="galeri-subtitle">
+        Dokumentasi visual tentang kantor, produk, aktivitas perusahaan, dan fasilitas produksi Kalbe Farma.
+      </p>
+    </div>
+ 
+    <div class="galeri-grid">
+      <div class="galeri-card">
+        <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/824c5c4975648f0dc7c48e53dd666a4b60a79f40.jpg" alt="Kalbe office building">
+        <h3>Gedung Perusahaan</h3>
+        <p>Bangunan modern dengan identitas visual Kalbe yang khas.</p>
+      </div>
+
+      <div class="galeri-card">
+        <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/fc89d46e83f1092ff4ece82ec26f4fd8921ce511.jpg" alt="Kalbe consumer health products">
+        <h3>Produk Consumer Health</h3>
+        <p>Berbagai produk kesehatan, vitamin, dan suplemen untuk masyarakat.</p>
+      </div>
+
+      <div class="galeri-card">
+        <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/20d7e6a180d4ccc506f939e280c65d0bd6e60568.jpg" alt="Kalbe production facility">
+        <h3>Fasilitas Produksi</h3>
+        <p>Area produksi modern dengan standar kebersihan dan teknologi tinggi.</p>
+      </div>
+
+      <div class="galeri-card">
+        <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/a999b137935de781e03d8bded5508b8dcc12c6ca.jpg" alt="Promag Herbal Plus">
+        <h3>Promag Herbal Plus</h3>
+        <p>Salah satu produk Kalbe yang dikenal luas di kategori kesehatan pencernaan.</p>
+      </div>
+
+      <div class="galeri-card">
+        <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/6a30d989e00f0fd8437591722f26b3d1493ce1cb.jpg" alt="Entroro Stop Anak">
+        <h3>Entroro Stop Anak</h3>
+        <p>Produk kesehatan untuk anak yang menjadi bagian dari portofolio Kalbe.</p>
+      </div>
+
+      <div class="galeri-card">
+        <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/4491f826b62c91a491f120e284fac79bd0c6238c.jpg" alt="Kalbe Nutritionals products">
+        <h3>Kalbe Nutritionals</h3>
+        <p>Kumpulan produk nutrisi seperti susu, suplemen, dan kebutuhan kesehatan.</p>
+      </div>
+
+      <div class="galeri-card">
+        <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/6f0392145e4040b53dd212362cba676d846b73cd.jpg" alt="Sterile production facility">
+        <h3>Fasilitas Steril</h3>
+        <p>Lingkungan produksi farmasi dengan standar kebersihan tinggi dan alat modern.</p>
+      </div>
+    </div>
+
+    <div class="galeri-detail">
+      <h3>Detail Tambahan</h3>
+      <p>
+        Kalbe Farma memiliki kegiatan yang mencakup pengembangan produk, distribusi kesehatan,
+        pelayanan farmasi, dan inovasi fasilitas produksi. Seluruh kegiatan tersebut mendukung
+        visi perusahaan untuk meningkatkan kesehatan masyarakat melalui produk berkualitas 
+      </p>
+    </div>
+</section>
+
+  <div style="position: fixed; bottom: 15px; right: 15px; text-align: center; opacity: 0.8; z-index: 9999;">
+  <img src="c:\Users\MyBook Hype AMD\OneDrive\Gambar\cemilan fevorit.html.jpeg" alt="Foto" style="width: 60px; height: 60px; border-radius: 50%; display: block; margin: 0 auto 5px; border: 2px solid #333;">
+  <p style="margin: 0; font-size: 12px; font-weight: bold; color: #333;">Aldi Sabtutrang</p>
+  <p style="margin: 0; font-size: 11px; color: #333;">NIM: 24.53.031531</p>
+</div>
+</body>
+
+<script>
+  (function() {
+    const saved = localStorage.getItem('kalbe_theme');
+    if (saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+  function toggleDark() {
+    const html = document.documentElement;
+    const icon = document.getElementById('themeIcon');
+    if (html.getAttribute('data-theme') === 'dark') {
+      html.removeAttribute('data-theme');
+      icon.textContent = '🌙';
+      localStorage.setItem('kalbe_theme', 'light');
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      icon.textContent = '☀️';
+      localStorage.setItem('kalbe_theme', 'dark');
+    }
+  }
+</script>
+</html>

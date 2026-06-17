@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT Kalbe Farma Tbk - Informasi Utama</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    :root{--kb:#004aad;--kg:#8aa01d;--kl:#eaf2ff;--ko:#ff6b35;--bg:#fff;--bg2:#f7fbff;--tx:#1f2d3d;--tm:#667085;--cb:#fff;--br:#eef2f7;--nb:#fff;--sh:rgba(0,0,0,.07);}
+    [data-theme="dark"]{--bg:#0f1117;--bg2:#161b27;--tx:#e2e8f0;--tm:#94a3b8;--cb:#1e2435;--br:#2d3748;--nb:#13192a;--sh:rgba(0,0,0,.35);}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--tx);transition:background .3s,color .3s;}
+    .navbar{background:var(--nb)!important;border-bottom:1px solid var(--br);min-height:70px;transition:all .3s;}
+    .navbar-brand span{font-weight:800;color:var(--kb);font-size:15px;}
+    .nav-link{font-weight:600;font-size:13px;text-transform:uppercase;color:var(--tx)!important;padding:8px 12px!important;position:relative;}
+    .nav-item .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--kg);transition:width .3s;}
+    .nav-item:hover .nav-link::after,.nav-item.active .nav-link::after{width:100%;}
+    #darkToggle{border:none;background:none;font-size:19px;cursor:pointer;color:var(--tx);transition:transform .3s;padding:4px 8px;border-radius:8px;}
+    #darkToggle:hover{transform:rotate(20deg);}
+    .page-header{background:linear-gradient(135deg,var(--kb),#0066cc);padding:60px 0 40px;color:#fff;}
+    .page-header h1{font-weight:800;font-size:2.3rem;}
+    .page-pill{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);padding:7px 18px;border-radius:999px;font-size:13px;display:inline-block;margin-bottom:14px;}
+    .sec-label{background:var(--kl);color:var(--kb);font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:999px;}
+    .sec-title{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:800;color:var(--tx);}
+    .sec-sub{color:var(--tm);max-width:600px;margin:0 auto;line-height:1.7;}
+    /* TABLE */
+    .tbl-wrap{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px var(--sh);border:1px solid var(--br);}
+    .tbl thead th{background:var(--kb);color:#fff;font-weight:600;padding:15px 18px;font-size:14px;}
+    .tbl tbody td{padding:15px 18px;border-color:var(--br);color:var(--tm);font-size:14px;vertical-align:middle;background:var(--cb);}
+    .tbl tbody tr:hover td{background:var(--kl);}
+    /* SERVICE CARDS */
+    .svc-card{background:var(--cb);border:1px solid var(--br);border-radius:18px;padding:24px;box-shadow:0 8px 28px var(--sh);transition:transform .3s,box-shadow .3s;}
+    .svc-card:hover{transform:translateY(-8px);box-shadow:0 18px 44px rgba(0,74,173,.15);}
+    .svc-icon{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--kb),#7fb3ff);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;margin-bottom:14px;}
+    .svc-card h5{color:var(--tx);font-weight:700;margin-bottom:8px;}
+    .svc-card p{color:var(--tm);font-size:13px;line-height:1.7;}
+    .check-item{font-size:12px;color:var(--tm);}
+    .check-item i{color:var(--kg);}
+    /* TESTI */
+    .testi-card{background:var(--cb);border:1px solid var(--br);border-radius:18px;padding:24px;box-shadow:0 8px 28px var(--sh);transition:transform .3s;height:100%;}
+    .testi-card:hover{transform:translateY(-5px);}
+    .testi-av{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px;flex-shrink:0;}
+    .testi-quote{color:var(--kb);opacity:.18;font-size:44px;line-height:1;}
+    .testi-text{color:var(--tm);font-style:italic;line-height:1.8;font-size:13px;}
+    .testi-name{font-weight:700;color:var(--tx);font-size:14px;}
+    .testi-role{font-size:11px;color:var(--tm);}
+    .stars{color:#f59e0b;font-size:12px;}
+    /* FAQ */
+    .accordion-item{background:var(--cb)!important;border:1px solid var(--br)!important;border-radius:14px!important;margin-bottom:10px;overflow:hidden;}
+    .accordion-button{background:var(--cb)!important;color:var(--tx)!important;font-weight:600;font-size:14px;box-shadow:none!important;}
+    .accordion-button:not(.collapsed){color:var(--kb)!important;background:var(--kl)!important;}
+    [data-theme="dark"] .accordion-button::after{filter:invert(1);}
+    .accordion-body{color:var(--tm);line-height:1.8;font-size:14px;background:var(--cb);}
+    footer{background:#111827;}
+    footer h5{color:#fff;font-weight:700;margin-bottom:14px;}
+    footer a,footer p{color:#9ca3af;font-size:13px;text-decoration:none;display:block;margin-bottom:6px;}
+    footer a:hover{color:#fff;}
+    .footer-btm{border-top:1px solid #1f2937;}
+    .soc-icon{width:36px;height:36px;background:#1f2937;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#9ca3af;transition:all .2s;margin-right:5px;}
+    .soc-icon:hover{background:var(--kb);color:#fff;}
+    #scrollTop{position:fixed;bottom:90px;right:16px;width:40px;height:40px;background:var(--kb);color:#fff;border:none;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:17px;cursor:pointer;z-index:9998;}
+    .author-badge{position:fixed;bottom:14px;right:14px;text-align:center;z-index:9999;background:var(--cb);border-radius:12px;padding:8px 12px;box-shadow:0 4px 16px var(--sh);border:1px solid var(--br);}
+    .author-badge .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--kb),var(--kg));display:flex;align-items:center;justify-content:center;margin:0 auto 5px;color:#fff;font-weight:800;font-size:15px;}
+    .author-badge p{margin:0;font-size:10px;color:var(--tm);}
+    .author-badge .nm{font-weight:700;font-size:11px;color:var(--tx);}
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="Beranda.html">
+    </a>
+    <div class="d-flex align-items-center gap-1 order-lg-last">
+      <button id="darkToggle"><i class="fas fa-moon"></i></button>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    </div>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="Profil.html">Profil</a></li>
+        <li class="nav-item active"><a class="nav-link" href="#">Informasi Utama</a></li>
+        <li class="nav-item"><a class="nav-link" href="Galeri_dark.html">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="Formulir.html">Formulir</a></li>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header text-center">
+  <div class="container" data-aos="fade-up">
+    <div class="page-pill"><i class="fas fa-stethoscope me-2"></i>PT Kalbe Farma Tbk</div>
+    <h1>Produk & Informasi Utama</h1>
+    <p class="opacity-75 mt-2">Daftar layanan dan produk unggulan Kalbe Farma</p>
+  </div>
+</div>
+
+<section class="py-5" style="background:var(--bg2);">
+  <div class="container">
+    <div class="text-center mb-4" data-aos="fade-up">
+      <span class="sec-label">Tabel Layanan</span>
+      <h2 class="sec-title mt-2">Ringkasan Divisi & Produk</h2>
+    </div>
+    <div class="tbl-wrap mb-5" data-aos="fade-up" data-aos-delay="100">
+      <table class="table tbl mb-0">
+        <thead><tr><th>Divisi</th><th>Layanan / Produk</th><th>Informasi Utama</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><span class="badge rounded-pill" style="background:var(--kl);color:var(--kb);">Obat Resep</span></td><td>Obat generik, branded generics, licensed drugs</td><td>Melayani rumah sakit dan apotek seluruh Indonesia</td><td><span class="badge bg-success">Aktif</span></td></tr>
+          <tr><td><span class="badge rounded-pill" style="background:var(--kl);color:var(--kb);">Kesehatan Konsumen</span></td><td>Obat bebas, vitamin, suplemen, minuman kesehatan</td><td>Fokus pada self-medication dengan merek kuat</td><td><span class="badge bg-success">Aktif</span></td></tr>
+          <tr><td><span class="badge rounded-pill" style="background:var(--kl);color:var(--kb);">Nutrisi</span></td><td>Susu nutrisi, makanan kesehatan, minuman fungsional</td><td>Mendukung gaya hidup sehat semua usia</td><td><span class="badge bg-success">Aktif</span></td></tr>
+          <tr><td><span class="badge rounded-pill" style="background:var(--kl);color:var(--kb);">Distribusi</span></td><td>Distribusi produk farmasi dan kesehatan</td><td>Lebih dari 1 juta outlet nasional</td><td><span class="badge bg-success">Aktif</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="svc-card"><div class="svc-icon">R</div><h5>Resep</h5><p>Obat resep dan generik untuk kebutuhan medis profesional di rumah sakit dan klinik.</p>
+          <div class="mt-3 d-flex flex-column gap-1"><div class="check-item"><i class="fas fa-check-circle me-2"></i>Obat generik bermerek</div><div class="check-item"><i class="fas fa-check-circle me-2"></i>Produk berlisensi</div><div class="check-item"><i class="fas fa-check-circle me-2"></i>Inovasi farmasi</div></div></div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="svc-card"><div class="svc-icon">K</div><h5>Konsumen</h5><p>Produk kesehatan mandiri seperti vitamin, suplemen, dan obat bebas untuk masyarakat.</p>
+          <div class="mt-3 d-flex flex-column gap-1"><div class="check-item"><i class="fas fa-check-circle me-2"></i>Obat bebas (OTC)</div><div class="check-item"><i class="fas fa-check-circle me-2"></i>Vitamin & suplemen</div><div class="check-item"><i class="fas fa-check-circle me-2"></i>Perawatan pribadi</div></div></div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="svc-card"><div class="svc-icon">N</div><h5>Nutrisi</h5><p>Produk nutrisi untuk menunjang kesehatan keluarga dari segala usia.</p>
+          <div class="mt-3 d-flex flex-column gap-1"><div class="check-item"><i class="fas fa-check-circle me-2"></i>Susu nutrisi</div><div class="check-item"><i class="fas fa-check-circle me-2"></i>Makanan fungsional</div><div class="check-item"><i class="fas fa-check-circle me-2"></i>Minuman kesehatan</div></div></div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="svc-card"><div class="svc-icon">D</div><h5>Distribusi</h5><p>Jaringan distribusi dan logistik yang mendukung seluruh lini bisnis Kalbe.</p>
+          <div class="mt-3 d-flex flex-column gap-1"><div class="check-item"><i class="fas fa-check-circle me-2"></i>1 juta+ outlet</div><div class="check-item"><i class="fas fa-check-circle me-2"></i>Jangkauan nasional</div><div class="check-item"><i class="fas fa-check-circle me-2"></i>Logistik modern</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section class="py-5" style="background:var(--bg);">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up"><span class="sec-label">Testimoni</span><h2 class="sec-title mt-2">Kepuasan Pelanggan Kami</h2></div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="testi-card"><div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testi-text mb-4">"Produk OTC Kalbe sangat membantu. Mixagrip sudah jadi andalan di keluarga kami saat musim hujan tiba."</p>
+          <div class="d-flex align-items-center gap-3"><div class="testi-av" style="background:linear-gradient(135deg,var(--kb),#7fb3ff);">A</div>
+            <div><div class="testi-name">Ahmad Fauzi</div><div class="testi-role">Pelanggan Setia, Pontianak</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div></div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="testi-card"><div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testi-text mb-4">"Sebagai apoteker, saya sangat terbantu dengan ketersediaan produk Kalbe yang lengkap dan pengiriman yang cepat."</p>
+          <div class="d-flex align-items-center gap-3"><div class="testi-av" style="background:linear-gradient(135deg,#16a34a,#4ade80);">N</div>
+            <div><div class="testi-name">Nana Apoteker</div><div class="testi-role">Apoteker, Tanjung Selor</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div></div></div></div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="testi-card"><div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testi-text mb-4">"Susu Prenagen dari Kalbe sangat membantu selama masa kehamilan saya. Nutrisinya lengkap dan rasanya enak."</p>
+          <div class="d-flex align-items-center gap-3"><div class="testi-av" style="background:linear-gradient(135deg,#d97706,#fbbf24);">L</div>
+            <div><div class="testi-name">Lestari Dewi</div><div class="testi-role">Ibu Hamil, Sampit</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5" style="background:var(--bg2);">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up"><span class="sec-label">FAQ</span><h2 class="sec-title mt-2">Pertanyaan Seputar Produk</h2></div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <div class="accordion" id="faqLayanan">
+          <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fl1"><i class="fas fa-question-circle me-3" style="color:var(--kb);"></i>Produk apa yang paling populer dari Kalbe?</button></h2>
+            <div id="fl1" class="accordion-collapse collapse show" data-bs-parent="#faqLayanan"><div class="accordion-body">Produk populer Kalbe antara lain <strong>Promag</strong> (maag), <strong>Mixagrip</strong> (flu), <strong>Woods</strong> (batuk), <strong>Fatigon</strong> (suplemen), dan <strong>CDR</strong> (kalsium). Di bidang nutrisi, <strong>Prenagen</strong> dan <strong>Morinaga</strong> sangat dikenal.</div></div></div>
+          <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fl2"><i class="fas fa-question-circle me-3" style="color:var(--kb);"></i>Di mana produk Kalbe bisa dibeli?</button></h2>
+            <div id="fl2" class="accordion-collapse collapse" data-bs-parent="#faqLayanan"><div class="accordion-body">Produk Kalbe tersedia di seluruh <strong>apotek, minimarket, supermarket, toko obat</strong>, dan platform e-commerce di seluruh Indonesia. Jaringan distribusi kami mencakup lebih dari 1 juta outlet.</div></div></div>
+          <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fl3"><i class="fas fa-question-circle me-3" style="color:var(--kb);"></i>Apakah Kalbe menyediakan layanan konsultasi?</button></h2>
+            <div id="fl3" class="accordion-collapse collapse" data-bs-parent="#faqLayanan"><div class="accordion-body">Ya, Kalbe menyediakan layanan konsultasi kesehatan melalui berbagai platform digital dan mitra apotek. Anda juga bisa menghubungi kami langsung via <a href="Formulir.html" style="color:var(--kb);">Formulir</a> untuk pertanyaan khusus.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-5">
+  <div class="container">
+    <div class="row gy-4 mb-4">
+      <div class="col-md-4"><img src="galeri/kb tbk.png" alt="Logo" style="height:28px;filter:brightness(10);" class="mb-3"><p>Perusahaan farmasi terbesar di Indonesia sejak 1966.</p>
+        <div class="mt-3"><a href="#" class="soc-icon"><i class="fab fa-facebook-f"></i></a><a href="#" class="soc-icon"><i class="fab fa-instagram"></i></a><a href="#" class="soc-icon"><i class="fab fa-linkedin-in"></i></a><a href="#" class="soc-icon"><i class="fab fa-youtube"></i></a></div></div>
+      <div class="col-6 col-md-4"><h5>Navigasi</h5><a href="Beranda.html">Beranda</a><a href="Profil.html">Profil</a><a href="Galeri.html">Galeri</a><a href="Formulir.html">Formulir</a></div>
+      <div class="col-6 col-md-4"><h5>Kontak</h5><p><i class="fas fa-map-marker-alt me-1"></i>Gedung KALBE, Jakarta 10510</p><p><i class="fas fa-phone me-1"></i>(021) 4287-3888</p></div>
+    </div>
+    <div class="footer-btm pt-3 text-center"><p style="color:#6b7280;margin:0;font-size:13px;">© 2026 PT Kalbe Farma Tbk.</p></div>
+  </div>
+</footer>
+<button id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+<div class="author-badge"><div class="av">A</div><p class="nm">Aldi Sabtutrang</p><p>NIM: 24.53.031531</p></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({once:true,duration:700,easing:'ease-out-cubic'});
+const html=document.documentElement, dBtn=document.getElementById('darkToggle');
+const saved=localStorage.getItem('kalbe-theme')||'light';
+html.setAttribute('data-theme',saved);dBtn.innerHTML=saved==='dark'?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';
+dBtn.addEventListener('click',()=>{const n=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',n);localStorage.setItem('kalbe-theme',n);dBtn.innerHTML=n==='dark'?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';});
+const stBtn=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>{stBtn.style.display=window.scrollY>300?'flex':'none';});
+stBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
